@@ -1,0 +1,25 @@
+while True:
+    try:
+        fraction = input("enter a fraction (X/Y): ")
+        x, y = fraction.split("/")
+        x = int(x)
+        y = int(y)
+        if y == 0:
+            continue
+        if x > y:
+            continue
+
+        percentage = round((x / y) * 100)
+
+        if percentage <= 1:
+            print("E")
+        elif percentage >= 99:
+            print("F")
+        else:
+            print(f"{percentage}%")
+        break
+    
+    except (ValueError, ZeroDivisionError):
+        pass
+    
+
